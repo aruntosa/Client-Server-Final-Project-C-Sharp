@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>        
+        <table style="width: 775px">
+                <tr>
+                    <td colspan="2">
+                        <asp:Image ID="Image1" runat="server" Height="110px" ImageUrl="~/Images/banner_new.jpg" Width="775px" />
+                    </td>                    
+                </tr>
+                <tr>
+                    <td style="background-color: #F46D11; vertical-align:top; width:125px; height: 600px">
+                        <br />
+                        <asp:HyperLink ID="HLHome" runat="server" ForeColor="White" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="hlLogin" runat="server" Font-Underline="True" ForeColor="White" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="hlSignUp" runat="server" Font-Underline="True" ForeColor="White" NavigateUrl="~/SignUp.aspx">Sign Up Now</asp:HyperLink>
+                        <br />
+                        <br />
+                        <asp:Label ID="lblShopping" runat="server" Font-Bold="False" Font-Size="Large" Font-Underline="False" ForeColor="White" Text="Shopping"></asp:Label>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HLSCostumes" runat="server" Font-Underline="True" ForeColor="White" NavigateUrl="~/Shopping.aspx?cat=costumes">Costumes</asp:HyperLink>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HLSEffects" runat="server" Font-Underline="True" ForeColor="White" NavigateUrl="~/Shopping.aspx?cat=fx">Special Effects</asp:HyperLink>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HLMasks" runat="server" Font-Underline="True" ForeColor="White" NavigateUrl="~/Shopping.aspx?cat=masks">Masks</asp:HyperLink>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HLProps" runat="server" Font-Underline="True" ForeColor="White" NavigateUrl="~/Shopping.aspx?cat=props">Props</asp:HyperLink>
+                        <br />
+                        <br />
+                        <asp:HyperLink ID="HLCart" runat="server" ForeColor="White" NavigateUrl="~/Cart.aspx">View Cart</asp:HyperLink>
+                        <br />
+                        <asp:HyperLink ID="HLCheckout" runat="server" ForeColor="White" NavigateUrl="~/Members/Checkout.aspx">Checkout</asp:HyperLink>
+                        <br />
+                        <br />
+                        <asp:Label ID="lblMembers" runat="server" Font-Bold="False" Font-Size="Large" Font-Underline="False" ForeColor="White" Text="Members"></asp:Label>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HLProfile" runat="server" ForeColor="White" NavigateUrl="~/Members/MyProfile.aspx">My Profile</asp:HyperLink>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HLMyOrders" runat="server" ForeColor="White" NavigateUrl="~/Members/My Orders.aspx">My Orders</asp:HyperLink>
+                        <br />
+                        <br />
+                        <asp:Label ID="lblAdmin" runat="server" Font-Bold="False" Font-Size="Large" Font-Underline="False" ForeColor="White" Text="Adminstration"></asp:Label>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HLACategories" runat="server" ForeColor="White" NavigateUrl="~/Maintenence/Categories.aspx">Categories</asp:HyperLink>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HLProducts" runat="server" ForeColor="White" NavigateUrl="~/Maintenence/Products.aspx">Products</asp:HyperLink>
+                        <br />
+                    </td>
+                    <td style="vertical-align:top; width: 650px">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                           </asp:ContentPlaceHolder> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
